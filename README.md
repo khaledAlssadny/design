@@ -1,19 +1,17 @@
 # design
-
 A new Flutter project.
 
 ## Task Video 🎥
-
-[![Watch the video](vedio_thumbnail.jpg)](https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing)
+<a href="https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing">
+  <img src="vedio_thumbnail.jpg" alt="Watch the video" width="400">
+</a>
 
 ---
 
 ## Getting Started
-
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
-
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
