@@ -1,10 +1,10 @@
-# Food Design Task
+# design
 
 A new Flutter project.
 
-## Task Video Link 🎥
+## Task Video 🎥
 
-[**📹 Click here to watch the task video**](https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing)
+[![Watch the video](video_thumbnail.png)](https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing)
 
 ---
 
