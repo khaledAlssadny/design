@@ -6,6 +6,8 @@ A new Flutter project.
   <img src="vedio_thumbnail.jpg" alt="Watch the video" width="200">
 </a>
 
+### 📹 [Click here to watch the video of the task](https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing)
+
 ---
 
 ## Getting Started
