@@ -1,16 +1,22 @@
 # design
+
 A new Flutter project.
+
 ## Task Video 🎥
-[![Watch the video](assets/Video_thumbnail.png)](https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing)
+
+[![Watch the video](Vedio_thumbnail.png)](https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing)
+
 ---
+
 ## Getting Started
+
 This project is a starting point for a Flutter application.
+
 A few resources to get you started if this is your first Flutter project:
+
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-
-
-this is a redeame file github i want the photo to be smaller as it's very big
