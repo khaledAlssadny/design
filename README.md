@@ -5,7 +5,7 @@ A new Flutter project.
 ## Task Video 🎥
 
 <a href="https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing">
-  <img src="assets/video_thumbnail.png" alt="Watch the video" width="400">
+  <img src="assets/Video_thumbnail.png" alt="Watch the video" width="400">
 </a>
 
 
