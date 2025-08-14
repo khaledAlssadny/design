@@ -1,4 +1,6 @@
+import 'package:design/core/constants/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ThreeImagesRow extends StatelessWidget {
   const ThreeImagesRow({super.key});
@@ -6,26 +8,26 @@ class ThreeImagesRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 400,
+      width: 400.w,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           _buildCircleItem(
-            imagePath: "assets/images/aa.png",
+            imagePath: "assets/images/favorites_icon.png",
             title: "Favorites",
             onTap: () {
               print("Image 1 tapped");
             },
           ),
           _buildCircleItem(
-            imagePath: "assets/images/bb.png",
+            imagePath: "assets/images/rewards_icon.png",
             title: "Rewards",
             onTap: () {
               print("Image 2 tapped");
             },
           ),
           _buildCircleItem(
-            imagePath: "assets/images/cc.png",
+            imagePath: "assets/images/orders_icon.png",
             title: "Orders",
             onTap: () {
               print("Image 3 tapped");
@@ -43,12 +45,12 @@ class ThreeImagesRow extends StatelessWidget {
   }) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(30),
+      borderRadius: BorderRadius.circular(30.r),
       child: Column(
         children: [
           Container(
-            height: 80,
-            width: 80,
+            height: 80.h,
+            width: 80.w,
             decoration: BoxDecoration(
               // color: const Color.fromARGB(246, 255, 247, 0), // #F6B31812
               shape: BoxShape.circle,
@@ -58,15 +60,8 @@ class ThreeImagesRow extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          const SizedBox(height: 5),
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w500,
-              fontFamily: 'TabletGothic',
-            ),
-          ),
+          SizedBox(height: 5.h),
+          Text(title, style: AppTextStyles.semi18),
         ],
       ),
     );

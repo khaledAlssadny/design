@@ -1,4 +1,6 @@
+import 'package:design/core/constants/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildSectionHeader extends StatelessWidget {
   final String title;
@@ -17,7 +19,7 @@ class BuildSectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Row(
         children: [
           Expanded(
@@ -25,21 +27,9 @@ class BuildSectionHeader extends StatelessWidget {
               onTap: onTap,
               child: Row(
                 children: [
-                  Text(
-                    '$title ',
-                    style: const TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w900,
-                      fontFamily: 'TabletGothic',
-                    ),
-                  ),
-                  Text(
-                    '($itemCount Items)',
-                    style: const TextStyle(
-                      fontSize: 13,
-                      fontFamily: 'TabletGothic',
-                    ),
-                  ),
+                  Text('$title ',
+                      style: AppTextStyles.bold20.copyWith(fontSize: 20.sp)),
+                  Text('($itemCount Items)', style: AppTextStyles.regular16),
                 ],
               ),
             ),
@@ -47,9 +37,9 @@ class BuildSectionHeader extends StatelessWidget {
           if (showActionButton)
             IconButton(
               onPressed: onTap,
-              icon: const Icon(
+              icon: Icon(
                 Icons.arrow_forward_ios,
-                size: 16,
+                size: 16.sp,
                 color: Colors.grey,
               ),
             ),

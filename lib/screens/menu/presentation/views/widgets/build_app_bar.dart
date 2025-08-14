@@ -1,4 +1,6 @@
+import 'package:design/core/constants/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildAppBar extends StatelessWidget {
   const BuildAppBar({super.key});
@@ -6,21 +8,17 @@ class BuildAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
       child: Row(
         children: [
-          const Text(
-            "Explore Menu",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'OperaWestern',
-            ),
-          ),
+          Text("Explore Menu",
+              style: AppTextStyles.regular18.copyWith(
+                fontFamily: 'OperaWestern',
+              )),
           const Spacer(),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.search, size: 35),
+            icon: Icon(Icons.search, size: 35.sp),
           ),
         ],
       ),

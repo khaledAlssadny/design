@@ -1,4 +1,6 @@
 // import 'package:design/screens/menu/menu_page.dart';+++++++++
+import 'package:design/core/constants/colors.dart';
+import 'package:design/core/constants/text_styles.dart';
 import 'package:design/core/utils/service_locator.dart';
 import 'package:design/screens/cart/cart_page.dart';
 import 'package:design/screens/home/home_page..dart';
@@ -8,12 +10,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:design/core/utils/assets.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 import 'screens/menu/presentation/views/menu_view.dart';
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
   setupServiceLocator();
-  runApp(const MyApp());
+  // final prefs = SharedPreferences.getInstance();
+  // runApp(DevicePreview(builder: (context) => MyApp()));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -26,8 +32,10 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp(
+          // builder: DevicePreview.appBuilder,
           // title: 'Food App',
           theme: ThemeData(
+            scaffoldBackgroundColor: Colors.white,
             fontFamily: 'TabletGothic',
           ),
           home: const MainScreen(),
@@ -81,7 +89,7 @@ class _MainScreenState extends State<MainScreen> {
         ),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+            padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 8.h),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -110,14 +118,14 @@ class _MainScreenState extends State<MainScreen> {
       // Show bigger image only, no text
       return GestureDetector(
         onTap: () => _onItemTapped(index),
-        child: Container(
+        child: SizedBox(
           height: 100,
           width: 100,
           // color: Colors.amber,
           child: SvgPicture.asset(
             isSelected ? activeImagePath : inactiveImagePath,
-            width: 100,
-            height: 100,
+            width: 100.w,
+            height: 100.h,
             fit: BoxFit.cover,
           ),
         ),
@@ -127,30 +135,24 @@ class _MainScreenState extends State<MainScreen> {
       return GestureDetector(
         onTap: () => _onItemTapped(index),
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+          padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
-                height: 30,
-                width: 30,
+                height: 30.h,
+                width: 30.w,
                 child: SvgPicture.asset(
                   isSelected ? activeImagePath : inactiveImagePath,
-                  width: 30,
-                  height: 30,
+                  height: 30.h,
+                  width: 30.w,
                 ),
               ),
-              const SizedBox(height: 4),
-              Text(
-                label,
-                style: TextStyle(
-                  color: isSelected
-                      ? const Color(0xFf2D2A26)
-                      : const Color(0xff757575),
-                  fontSize: 12,
-                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
-                ),
-              ),
+              SizedBox(height: 4.h),
+              Text(label,
+                  style: AppTextStyles.semi14.copyWith(
+                    color: isSelected ? AppColors.primary : AppColors.secondary,
+                  )),
             ],
           ),
         ),

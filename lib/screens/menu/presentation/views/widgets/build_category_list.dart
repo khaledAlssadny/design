@@ -1,8 +1,7 @@
-
 import 'package:design/screens/menu/data/models/category.dart';
 import 'package:design/screens/menu/presentation/views/widgets/build_category_item.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //lib\screens\menu\presentation\views\widgets\build_category_item.dart
 class BuildCategoryList extends StatefulWidget {
@@ -23,11 +22,11 @@ class _BuildCategoryListState extends State<BuildCategoryList> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 47,
+      height: 47.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: widget.categories.length,
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 3),
+        padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 3.h),
         itemBuilder: (context, index) {
           final category = widget.categories[index];
           final bool isSelected = index == selectedIndex;

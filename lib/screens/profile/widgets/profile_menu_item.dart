@@ -1,4 +1,6 @@
+import 'package:design/core/constants/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileMenuItem extends StatelessWidget {
   final String imagePath;
@@ -17,28 +19,24 @@ class ProfileMenuItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
         child: Row(
           children: [
             Image.asset(
               imagePath,
-              width: 22,
-              height: 22,
+              width: 22.w,
+              height: 22.h,
               fit: BoxFit.contain,
             ),
-            const SizedBox(width: 16),
+            SizedBox(width: 16.w),
             Expanded(
-              child: Text(
-                title,
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: title == 'Delete my Account'
-                        ? Color(0xFF9A3324)
-                        : Colors.black),
-              ),
+              child: Text(title,
+                  style: AppTextStyles.semi18.copyWith(
+                      color: title == 'Delete my Account'
+                          ? Color(0xFF9A3324)
+                          : Colors.black)),
             ),
-            const Icon(Icons.arrow_forward_ios, size: 12),
+            Icon(Icons.arrow_forward_ios, size: 12.sp),
           ],
         ),
       ),

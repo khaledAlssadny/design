@@ -1,4 +1,7 @@
+import 'package:design/core/constants/colors.dart';
+import 'package:design/core/constants/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Reusable Toggle Row Widget
 class ToggleRowItem extends StatefulWidget {
@@ -50,11 +53,11 @@ class _ToggleRowItemState extends State<ToggleRowItem> {
           // Left Icon
           Image.asset(
             widget.iconPath,
-            width: 24,
-            height: 24,
+            width: 24.w,
+            height: 24.h,
             fit: BoxFit.contain,
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16.w),
 
           // Middle Column with two texts
           Expanded(
@@ -62,22 +65,12 @@ class _ToggleRowItemState extends State<ToggleRowItem> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  widget.title,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
-                ),
-                const SizedBox(height: 4),
+                Text(widget.title, style: AppTextStyles.semi18),
+                SizedBox(height: 4.h),
                 Text(
                   widget.subtitle,
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.grey[600],
-                  ),
+                  style:
+                      AppTextStyles.semi18.copyWith(color: AppColors.secondary),
                 ),
               ],
             ),
@@ -87,10 +80,10 @@ class _ToggleRowItemState extends State<ToggleRowItem> {
           GestureDetector(
             onTap: _handleToggle,
             child: Container(
-              width: 50,
-              height: 28,
+              width: 50.w,
+              height: 28.h,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(14.r),
                 color: isToggled
                     ? (widget.activeColor ?? const Color(0xFFF6B318))
                     : (widget.inactiveColor ?? Colors.grey[300]),
@@ -101,9 +94,9 @@ class _ToggleRowItemState extends State<ToggleRowItem> {
                 alignment:
                     isToggled ? Alignment.centerRight : Alignment.centerLeft,
                 child: Container(
-                  width: 24,
-                  height: 24,
-                  margin: const EdgeInsets.all(2),
+                  width: 24.w,
+                  height: 24.h,
+                  margin: EdgeInsets.all(2.r),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.white,
@@ -145,9 +138,9 @@ class ToggleSettings extends StatelessWidget {
         ),
 
         // Optional divider between items
-        const Divider(
-          height: 1,
-          thickness: 0.5,
+        Divider(
+          height: 1.h,
+          thickness: 0.5.r,
           color: Color(0xFFE5E5E5),
           indent: 56,
         ),
@@ -164,9 +157,9 @@ class ToggleSettings extends StatelessWidget {
         ),
 
         // You can add more toggle items here
-        const Divider(
-          height: 1,
-          thickness: 0.5,
+        Divider(
+          height: 1.h,
+          thickness: 0.5.r,
           color: Color(0xFFE5E5E5),
           indent: 56,
         ),
@@ -182,10 +175,10 @@ class ToggleSettingsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(16),
+      margin: EdgeInsets.all(16.r),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.r),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.1),
@@ -206,7 +199,7 @@ class ToggleSettingsCard extends StatelessWidget {
               print('Notifications: $value');
             },
           ),
-          const Divider(height: 1, indent: 56),
+          Divider(height: 1.h, indent: 56),
           ToggleRowItem(
             iconPath: 'assets/images/location.png',
             title: 'Location Services',

@@ -1,5 +1,6 @@
 import 'package:design/screens/profile/widgets/profile_menu_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileMenu extends StatelessWidget {
   const ProfileMenu({super.key});
@@ -49,12 +50,12 @@ class ProfileMenu extends StatelessWidget {
           ),
           // Add divider after each item except the last one
           if (i < menuItems.length - 1)
-            const Divider(
-              height: 1,
-              thickness: 0.5,
+            Divider(
+              height: 1.h, // vertical spacing
+              thickness: 0.5.r, // line thickness
               color: Color(0xFFE5E5E5),
-              indent: 20,
-              endIndent: 10, // Align with text (icon width + spacing)
+              indent: 20.w, // horizontal start
+              endIndent: 10.w, // horizontal end
             ),
         ],
       ],

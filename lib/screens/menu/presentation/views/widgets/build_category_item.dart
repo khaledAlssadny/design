@@ -1,5 +1,7 @@
+import 'package:design/core/constants/text_styles.dart';
 import 'package:design/screens/menu/data/models/category.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildCategoryItem extends StatelessWidget {
   final Category category;
@@ -16,18 +18,18 @@ class BuildCategoryItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(2, 3, 10, 3),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        padding: EdgeInsets.symmetric(horizontal: 12.w),
         decoration: BoxDecoration(
           color: isSelected ? const Color(0xFFF6B318) : Colors.white,
-          borderRadius: BorderRadius.circular(29),
+          borderRadius: BorderRadius.circular(29.r),
           border: Border.all(color: const Color(0xFFF6B318)),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              width: 30,
-              height: 30,
+              width: 30.w,
+              height: 30.h,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
@@ -36,16 +38,13 @@ class BuildCategoryItem extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(width: 6),
+            SizedBox(width: 6.w),
             Text(
               category.name,
-              style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
+              style: AppTextStyles.semi18,
               overflow: TextOverflow.ellipsis,
             ),
-            const SizedBox(width: 12),
+             SizedBox(width: 12.w),
           ],
         ),
       ),

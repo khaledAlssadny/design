@@ -7,6 +7,7 @@ import 'package:design/screens/menu/presentation/views/widgets/build_item_card.d
 import 'package:design/screens/menu/presentation/views/widgets/build_section_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MenuViewBody extends StatelessWidget {
   const MenuViewBody({super.key});
@@ -31,28 +32,31 @@ class MenuViewBody extends StatelessWidget {
             body: SafeArea(
               child: SingleChildScrollView(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const BuildAppBar(),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     BuildCategoryList(categories: categories),
-                    const SizedBox(height: 25),
+                    SizedBox(height: 25.h),
                     BuildSectionHeader(
                         title: "Sandwiches",
                         itemCount: state.items.length.toString()),
-                    const SizedBox(height: 30),
-                    Column(
-                      children: state.items.asMap().entries.map((entry) {
-                        final index = entry.key;
-                        final item = entry.value;
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 20),
-                          child: BuildFoodItemCard(item: item),
-                        );
-                      }).toList(),
+                    SizedBox(height: 30.h),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16.h),
+                      child: Column(
+                        children: state.items.asMap().entries.map((entry) {
+                          final index = entry.key;
+                          final item = entry.value;
+                          return Padding(
+                            padding: EdgeInsets.only(bottom: 20.h),
+                            child: BuildFoodItemCard(item: item),
+                          );
+                        }).toList(),
+                      ),
                     ),
                     // Add some bottom padding so content doesn't hide behind nav bar
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20.h),
                   ],
                 ),
               ),
