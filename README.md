@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Task Video 🎥
 
-[![Watch the video](Vedio_thumbnail.png)](https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing)
+[![Watch the video](vedio_thumbnail.jpg)](https://drive.google.com/file/d/1nvh1XetO6e5b_ccDl0O6jv_061buJoNu/view?usp=sharing)
 
 ---
 
