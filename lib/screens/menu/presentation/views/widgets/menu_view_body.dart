@@ -46,7 +46,7 @@ class MenuViewBody extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 16.h),
                       child: Column(
                         children: state.items.asMap().entries.map((entry) {
-                          final index = entry.key;
+                          // final index = entry.key;
                           final item = entry.value;
                           return Padding(
                             padding: EdgeInsets.only(bottom: 20.h),
